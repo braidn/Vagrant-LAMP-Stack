@@ -16,6 +16,8 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
     chef.add_recipe "apt"
+		chef.add_recipe "build-essential"
+		chef.add_recipe "openssh"
     chef.add_recipe "postfix"
     chef.add_recipe "openssl"
     chef.add_recipe "apache2"
@@ -32,6 +34,12 @@ Vagrant::Config.run do |config|
     chef.add_recipe "dotdeb::php54"
 		chef.add_recipe "rvm::vagrant"
 		chef.add_recipe "rvm::user"
+		chef.add_recipe "readline"
+    chef.add_recipe "perl"
+    chef.add_recipe "xml"
+    chef.add_recipe "zlib"
+		chef.add_recipe "nodejs::npm"
+		chef.add_recipe "homemade/chef-dotdeb"
     chef.add_recipe "php"
     chef.json = {
       :misc => {
@@ -58,7 +66,19 @@ Vagrant::Config.run do |config|
         :server_debian_password => 'root',
         :bind_address           => '172.90.90.80',
         :allow_remote_root      => true
-      }
+      },
+			:rvm => {
+				:rubies => [ "1.9.3-p286"  ],
+				:default_ruby => '1.9.3',
+				:group_users => ["vagrant"],
+				:global_gems => [
+					{ :name => 'bundler' },
+					{ :name => 'rake' },
+					{ :name => 'chef' },
+					{ :name => 'passenger' }
+				]
+
+			}
     }
   end
 end

@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+#where the shit is it all coming from?
+site "http://community.opscode.com/api/v1"
+
+#rvm for some ruby changing goodeness
+cookbook 'apache2'
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'readline'
+cookbook 'openssh'
+cookbook 'perl'
+cookbook 'xml'
+cookbook 'nodejs'
+cookbook 'zlib'
+cookbook 'homemade/chef-dotdeb',
+	:git => 'git://github.com/homemade/chef-dotdeb.git',
+	:ref => :master
+cookbook 'memcached'
+cookbook 'mysql'
+cookbook 'openssl'
+cookbook 'php'
+cookbook 'postfix'
+cookbook 'rvm',
+	  :git => 'git://github.com/fnichol/chef-rvm.git',
+		:ref => :master
