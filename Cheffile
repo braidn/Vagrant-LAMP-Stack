@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
+#^syntax detection
 
 #where the shit is it all coming from?
-site "http://community.opscode.com/api/v1"
+site 'http://community.opscode.com/api/v1'
 
 #rvm for some ruby changing goodeness
 cookbook 'apache2'
