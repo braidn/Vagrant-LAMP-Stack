@@ -19,7 +19,7 @@ Place your website in the `public_html` folder
 Start the VM
 
 	$ cd Vagrant-LAMP-Stack
-	$ chef-librarian install
+	$ librarian-chef install
 	$ vagrant up
 
 ### Database dump import
