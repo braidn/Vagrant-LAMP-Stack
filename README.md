@@ -1,14 +1,12 @@
-# Vagrant LAMP stack
-A dead-simple LAMP stack without any bells and whistles for your basic Linux/Apache/MySQL/PHP install, using Chef Solo for provisioning.
-
-The idea is for developers to fork this and add additional software and configuration that suits the needs of their project.
+# Vagrant LAMP-Ruby stack
+A dead-simple LAMP-Ruby stack without any bells and whistles for your basic Linux/Apache/MySQL/PHP install, using Chef Solo + Chef-Librarian for provisioning.
+This project has been forked to accomodate the mass amount of people who should be porting older PHP applications to Ruby/Python/Node apps. Of course this 
+will fit the bill for the Ruby/Rails nerds vs Pypyers or NodeHeads
 
 ## Requirements
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
-* [vagrant-hostmaster](https://github.com/mosaicxm/vagrant-hostmaster)
-
-**Note:** Because of several dependencies, this project requires Vagrant 1.0.x for now.
+* [Chef-Librarian](https://github.com/applicationsonline/librarian)
 
 ## Installation
 Clone this repository and it's submodules
@@ -21,11 +19,8 @@ Place your website in the `public_html` folder
 Start the VM
 
 	$ cd Vagrant-LAMP-Stack
+	$ chef-librarian install
 	$ vagrant up
-
-You can now access your project at [http://server.dev](http://server.dev)
-
-![Screenshot of up-and-running server](http://i.imgur.com/TP1i9Zd.png)
 
 ### Database dump import
 Chef will automatically try to import the database dump specified by the filename set in the `:db_dump` option of your Vagrantfile.
@@ -39,6 +34,8 @@ If you are using the default configuration, just create a `dump.sql` file in the
 * memcached
 * postfix
 * vim, git, screen, curl, composer
+* RVM + 1.9.3px
+* Passenger
 
 ## Default credentials
 ### MySQL
@@ -46,8 +43,6 @@ If you are using the default configuration, just create a `dump.sql` file in the
 * Password: root
 * Host: localhost
 * Port: 3306
-
-**Note:** Remote MySQL access is enabled by default, so you can access the MySQL database using your favorite MySQL client with the above credentials (and using e.g. *server.dev* as hostname).
 
 ### Memcached
 * Port: 11211
