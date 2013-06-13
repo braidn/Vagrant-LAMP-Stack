@@ -23,5 +23,7 @@ cookbook 'openssl'
 cookbook 'php'
 cookbook 'postfix'
 cookbook 'rvm',
-	  :git => 'git://github.com/fnichol/chef-rvm.git',
-		:ref => :master
+	:git => 'git://github.com/fnichol/chef-rvm.git',
+	:ref => ':master'
+cookbook 'misc',
+	:path => 'vendor/cookbooks/misc'
