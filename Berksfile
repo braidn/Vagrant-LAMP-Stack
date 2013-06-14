@@ -1,7 +1,8 @@
 site :opscode
 
+cookbook 'apt',
+	git: 'https://github.com/gchef/apt-cookbook.git'
 cookbook 'apache2'
-cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'readline'
 cookbook 'openssh'
@@ -15,7 +16,7 @@ cookbook 'openssl'
 cookbook 'php'
 cookbook 'postfix'
 cookbook 'misc',
-	path: 'cookbooks/misc'
+	path: 'vendor/cookbooks/misc'
 cookbook 'rvm',
 	git: 'https://github.com/fnichol/chef-rvm.git'
 cookbook 'chef-dotdeb',
