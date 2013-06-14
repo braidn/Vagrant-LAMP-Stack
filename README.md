@@ -1,26 +1,24 @@
 # Vagrant LAMP-Ruby stack
-A dead-simple LAMP-Ruby stack without any bells and whistles for your basic Linux/Apache/MySQL/PHP install, using Chef Solo + Chef-Librarian for provisioning.
+A dead-simple LAMP-Ruby stack without any bells and whistles for your basic Linux/Apache/MySQL/PHP install, using Chef Solo + Berkshelf for provisioning.
 This project has been forked to accomodate the mass amount of people who should be porting older PHP applications to Ruby/Python/Node apps. Of course this 
 will fit the bill for the Ruby/Rails nerds vs Pypyers or NodeHeads
 
 ## Requirements
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
-* [Chef-Librarian](https://github.com/applicationsonline/librarian)
+* [Berkshelf](http://berkshelf.com/)
 
 ## Installation
-Clone this repository and it's submodules
-
-    $ git clone git@github.com:MiniCodeMonkey/Vagrant-LAMP-Stack.git --recursive
-
+Clone this repository
+Install the berkshelf gem with: `$ gem install berkshelf`
 Place your website in the `public_html` folder
 
 ## Usage
 Start the VM
 
-	$ cd Vagrant-LAMP-Stack
-	$ librarian-chef install
-	$ vagrant up
+`$ cd Vagrant-LAMP-Stack`
+`$ berks install`
+`$ vagrant up`
 
 ### Database dump import
 Chef will automatically try to import the database dump specified by the filename set in the `:db_dump` option of your Vagrantfile.
