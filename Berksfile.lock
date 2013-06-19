@@ -1,0 +1,85 @@
+{
+  "sha": "1429df4737c7e568ef0867f85b2e93ba1cc27e63",
+  "sources": {
+    "apt": {
+      "locked_version": "1.4.0",
+      "git": "https://github.com/gchef/apt-cookbook.git",
+      "ref": "c1ed125a3329181ad79263fbbcc9be3ad955e3a9"
+    },
+    "apache2": {
+      "locked_version": "1.6.2"
+    },
+    "build-essential": {
+      "locked_version": "1.4.0"
+    },
+    "readline": {
+      "locked_version": "0.0.3"
+    },
+    "openssh": {
+      "locked_version": "1.2.0"
+    },
+    "perl": {
+      "locked_version": "1.1.2"
+    },
+    "xml": {
+      "locked_version": "1.1.2"
+    },
+    "nodejs": {
+      "locked_version": "1.1.2"
+    },
+    "zlib": {
+      "locked_version": "2.0.0"
+    },
+    "memcached": {
+      "locked_version": "1.4.0"
+    },
+    "mysql": {
+      "locked_version": "3.0.2"
+    },
+    "openssl": {
+      "locked_version": "1.0.2"
+    },
+    "php": {
+      "locked_version": "1.2.2"
+    },
+    "postfix": {
+      "locked_version": "2.1.6"
+    },
+    "misc": {
+      "locked_version": "0.0.1",
+      "path": "vendor/cookbooks/misc"
+    },
+    "rvm": {
+      "locked_version": "0.9.1",
+      "git": "https://github.com/fnichol/chef-rvm.git",
+      "ref": "7038fb8c518d0d7785767de215b1ae463f237973"
+    },
+    "chef-dotdeb": {
+      "locked_version": "0.0.1",
+      "git": "https://github.com/homemade/chef-dotdeb.git",
+      "ref": "a3633b25f1f011da73cc510d9516c09ad0277497"
+    },
+    "iptables": {
+      "locked_version": "0.12.0"
+    },
+    "runit": {
+      "locked_version": "1.1.4",
+      "constraint": "~> 1.0"
+    },
+    "yum": {
+      "locked_version": "2.2.4"
+    },
+    "java": {
+      "locked_version": "1.11.4"
+    },
+    "windows": {
+      "locked_version": "1.9.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "chef_gem": {
+      "locked_version": "0.1.0"
+    }
+  }
+}
