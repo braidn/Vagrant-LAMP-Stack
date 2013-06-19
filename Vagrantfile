@@ -65,7 +65,7 @@ Vagrant.configure('2') do |config|
         :allow_remote_root      => true
       },
 			:rvm => {
-				:rubies => [ "1.9.3-p286"  ],
+				:rubies => [ "1.9.3"  ],
 				:default_ruby => '1.9.3',
 				:group_users => ["vagrant"],
 				:global_gems => [
