@@ -3,6 +3,7 @@ site :opscode
 cookbook 'apt',
 	git: 'https://github.com/gchef/apt-cookbook.git'
 cookbook 'apache2'
+cookbook 'passenger_apache2'
 cookbook 'build-essential'
 cookbook 'readline'
 cookbook 'openssh'
