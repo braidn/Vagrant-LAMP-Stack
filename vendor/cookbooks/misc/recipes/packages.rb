@@ -6,7 +6,7 @@
 #
 
 # Install misc packages
-%w{ vim git screen curl }.each do |a_package|
+%w{ vim git screen curl libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev }.each do |a_package|
   package a_package
 end
 

@@ -16,9 +16,13 @@ Place your website in the `public_html` folder
 ## Usage
 Start the VM
 
-`$ cd Vagrant-LAMP-Stack`
-`$ berks install`
-`$ vagrant up`
+* `$ cd Vagrant-LAMP-Stack`
+* `$ berks install`
+* `$ vagrant up`
+* `$ vagrant ssh`
+* `$ rvmsudo passenger-install-apache2-module`
+* use your app's apache config
+* import an sql dump into mysql
 
 ### Database dump import
 Chef will automatically try to import the database dump specified by the filename set in the `:db_dump` option of your Vagrantfile.
@@ -32,7 +36,7 @@ If you are using the default configuration, just create a `dump.sql` file in the
 * memcached
 * postfix
 * vim, git, screen, curl, composer
-* RVM + 1.9.3px
+* RVM + 1.9.3-px
 * Passenger
 
 ## Default credentials

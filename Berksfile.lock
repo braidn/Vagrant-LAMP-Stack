@@ -1,5 +1,5 @@
 {
-  "sha": "09e69bc139e97d632916883daa1c848841aaffcc",
+  "sha": "1429df4737c7e568ef0867f85b2e93ba1cc27e63",
   "sources": {
     "apt": {
       "locked_version": "1.4.0",
@@ -8,9 +8,6 @@
     },
     "apache2": {
       "locked_version": "1.6.2"
-    },
-    "passenger_apache2": {
-      "locked_version": "2.0.2"
     },
     "build-essential": {
       "locked_version": "1.4.0"
