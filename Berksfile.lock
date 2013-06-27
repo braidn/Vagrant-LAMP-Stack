@@ -1,5 +1,5 @@
 {
-  "sha": "1429df4737c7e568ef0867f85b2e93ba1cc27e63",
+  "sha": "c69d09761766b36ff65f05dfcac99c3db89ffcec",
   "sources": {
     "apt": {
       "locked_version": "1.4.0",
@@ -8,6 +8,11 @@
     },
     "apache2": {
       "locked_version": "1.6.2"
+    },
+    "rvm_passenger_apache2": {
+      "locked_version": "1.0.1",
+      "git": "https://github.com/stefan-lz/rvm_passenger_apache2",
+      "ref": "0aae3a58ab37b4e1bb9455a8d439952c8f20ec12"
     },
     "build-essential": {
       "locked_version": "1.4.0"

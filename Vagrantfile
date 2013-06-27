@@ -21,6 +21,10 @@ Vagrant.configure('2') do |config|
 		chef.add_recipe "openssh"
 		chef.add_recipe "postfix"
 		chef.add_recipe "openssl"
+		chef.add_recipe "readline"
+		chef.add_recipe "perl"
+		chef.add_recipe "xml"
+		chef.add_recipe "zlib"
 		chef.add_recipe "apache2"
 		chef.add_recipe "apache2::mod_php5"
 		chef.add_recipe "apache2::mod_rewrite"
@@ -31,15 +35,13 @@ Vagrant.configure('2') do |config|
 		chef.add_recipe "misc::packages"
 		chef.add_recipe "misc::vhost"
 		chef.add_recipe "misc::db"
+		chef.add_recipe "rvm::system"
 		chef.add_recipe "chef-dotdeb"
 		chef.add_recipe "chef-dotdeb::php54"
-		chef.add_recipe "rvm::system"
-		chef.add_recipe "readline"
-		chef.add_recipe "perl"
-		chef.add_recipe "xml"
-		chef.add_recipe "zlib"
 		chef.add_recipe "nodejs::npm"
 		chef.add_recipe "php"
+		chef.add_recipe "rvm_passenger_apache2"
+		chef.add_recipe "rvm_passenger_apache2::mod_rails"
     chef.json = {
       :misc => {
         # Project name
@@ -59,16 +61,19 @@ Vagrant.configure('2') do |config|
         :allow_remote_root      => true
       },
 			:rvm => {
-				:rubies => [ "1.9.3"  ],
-				:default_ruby => '1.9.3',
+				:rubies => [ "1.9.3-p429"  ],
+				:default_ruby => '1.9.3-p429',
 				:group_users => ["vagrant"],
 				:global_gems => [
 					{ :name => 'bundler' },
 					{ :name => 'rake' },
-					{ :name => 'chef' },
-					{ :name => 'passenger' }
+					{ :name => 'chef' }
 				]
-
+			},
+			:passenger => {
+				:rvm_ruby_version => 'ruby-1.9.3-p429',
+				:rvm_path => '/usr/local/rvm',
+				:rvm_gemset => 'global'
 			}
     }
   end
