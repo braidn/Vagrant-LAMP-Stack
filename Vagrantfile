@@ -33,8 +33,6 @@ Vagrant.configure('2') do |config|
 		chef.add_recipe "mysql::server"
 		chef.add_recipe "memcached"
 		chef.add_recipe "misc::packages"
-		chef.add_recipe "misc::vhost"
-		chef.add_recipe "misc::db"
 		chef.add_recipe "rvm::system"
 		chef.add_recipe "chef-dotdeb"
 		chef.add_recipe "chef-dotdeb::php54"
@@ -43,16 +41,6 @@ Vagrant.configure('2') do |config|
 		chef.add_recipe "rvm_passenger_apache2"
 		chef.add_recipe "rvm_passenger_apache2::mod_rails"
     chef.json = {
-      :misc => {
-        # Project name
-        :name           => "server",
-        # Server name and alias(es) for Apache vhost
-        :server_name    => "server.dev",
-        :server_aliases => "*.server.dev",
-
-        # Document root for Apache vhost
-        :docroot        => "/home/vagrant/shared/public_html",
-      },
       :mysql => {
         :server_root_password   => 'root',
         :server_repl_password   => 'root',
